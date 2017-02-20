@@ -9,6 +9,10 @@
 import Alamofire
 import UIKit
 
+protocol WeatherServiceDelegate : class {
+    func datasFetched(response:WeatherService.WeatherResponse)
+}
+
 class WeatherService: NSObject {
     
     enum WheatherError : Error {
@@ -20,23 +24,25 @@ class WeatherService: NSObject {
         case success(WeatherModel)
         case error(WheatherError)
     }
+    
+    weak var delegate:WeatherServiceDelegate?
 
-    func get16DaysWeather(completion: @escaping (WeatherResponse) -> Void) {
+    func get16DaysWeather() {
         
         let url = "https://samples.openweathermap.org/data/2.5/forecast/daily?id=6455259&appid=b1b15e88fa797225412429c1c50c122a1"
         
-        Alamofire.request(url).responseJSON { response in
+        Alamofire.request(url).responseJSON { [weak self] response in
             
             switch (response.result) {
             case .success(let data):
                 if let dictionary = data as? [String:Any], let weatherModel = WeatherModel(json: dictionary) {
-                    completion( .success(weatherModel) )
+                    self?.delegate?.datasFetched(response: .success(weatherModel) )
                 } else {
-                    completion( .error( .unknowError ) )
+                    self?.delegate?.datasFetched(response: .error( .unknowError ) )
                 }
                 
             case .failure( _):
-                completion( .error( .networkError ) )
+                self?.delegate?.datasFetched(response: .error( .networkError ) )
             }
         }
     }

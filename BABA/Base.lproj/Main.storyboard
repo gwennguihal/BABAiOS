@@ -52,7 +52,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jqy-Tw-Q5g"/>
                     <connections>
-                        <outlet property="tableView" destination="upN-u4-mUb" id="Mcu-rP-C55"/>
+                        <outlet property="tableView" destination="upN-u4-mUb" id="VEY-kl-2Ij"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFb-dH-umY" userLabel="First Responder" sceneMemberID="firstResponder"/>

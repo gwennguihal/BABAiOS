@@ -10,10 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
     
     let weatherService = WeatherService()
     var weatherModel:WeatherModel?
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +30,25 @@ class ViewController: UIViewController {
         tableView.delegate = self
         
         // service
-        weatherService.get16DaysWeather { [weak self] (response) in
-            switch response {
+        weatherService.delegate = self
+        weatherService.get16DaysWeather()
+    }
+}
+
+extension ViewController : WeatherServiceDelegate {
+    func datasFetched(response: WeatherService.WeatherResponse) {
+        
+        switch response {
             
-            case .success(let weatherModel):
-                self?.title = "Metéo \(weatherModel.cityName)"
-                self?.weatherModel = weatherModel
-                self?.tableView.reloadData()
+        case .success(let weatherModel):
+            self.title = "Metéo \(weatherModel.cityName)"
+            self.weatherModel = weatherModel
+            self.tableView.reloadData()
             
-            case .error(let error):
-                print("Error occured \(error)")
-            }
+        case .error(let error):
+            print("Error occured \(error)")
         }
+        
     }
 }
 
