@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A81DBB6A25FE37DC34533062 /* Pods_BABA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EF3724E60048EA60A14F63 /* Pods_BABA.framework */; };
+		D91B91F41E5B0562002EAEBF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91B91F21E5B0562002EAEBF /* DetailsViewController.swift */; };
+		D91B91F51E5B0562002EAEBF /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D91B91F31E5B0562002EAEBF /* DetailsViewController.xib */; };
 		F0D885C71E55E8A30038ED62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D885C61E55E8A30038ED62 /* AppDelegate.swift */; };
 		F0D885C91E55E8A30038ED62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D885C81E55E8A30038ED62 /* ViewController.swift */; };
 		F0D885CC1E55E8A30038ED62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0D885CA1E55E8A30038ED62 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 		58EF3724E60048EA60A14F63 /* Pods_BABA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BABA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4D89A2CB9B1253AC535F83 /* Pods-BABA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BABA.release.xcconfig"; path = "Pods/Target Support Files/Pods-BABA/Pods-BABA.release.xcconfig"; sourceTree = "<group>"; };
 		81D52F086FA536E592434929 /* Pods-BABA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BABA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BABA/Pods-BABA.debug.xcconfig"; sourceTree = "<group>"; };
+		D91B91F21E5B0562002EAEBF /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		D91B91F31E5B0562002EAEBF /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		F0D885C31E55E8A30038ED62 /* BABA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BABA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D885C61E55E8A30038ED62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0D885C81E55E8A30038ED62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D91B91F11E5B054D002EAEBF /* details */ = {
+			isa = PBXGroup;
+			children = (
+				D91B91F21E5B0562002EAEBF /* DetailsViewController.swift */,
+				D91B91F31E5B0562002EAEBF /* DetailsViewController.xib */,
+			);
+			name = details;
+			sourceTree = "<group>";
+		};
 		F0D885BA1E55E8A30038ED62 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +101,7 @@
 		F0D885C51E55E8A30038ED62 /* BABA */ = {
 			isa = PBXGroup;
 			children = (
+				D91B91F11E5B054D002EAEBF /* details */,
 				F0D885DE1E57095B0038ED62 /* cell */,
 				F0D885D81E55EC5E0038ED62 /* business */,
 				F0D885C61E55E8A30038ED62 /* AppDelegate.swift */,
@@ -184,6 +198,7 @@
 			files = (
 				F0D885E21E5709710038ED62 /* WeatherCellTableViewCell.xib in Resources */,
 				F0D885D11E55E8A30038ED62 /* LaunchScreen.storyboard in Resources */,
+				D91B91F51E5B0562002EAEBF /* DetailsViewController.xib in Resources */,
 				F0D885CE1E55E8A30038ED62 /* Assets.xcassets in Resources */,
 				F0D885CC1E55E8A30038ED62 /* Main.storyboard in Resources */,
 			);
@@ -248,6 +263,7 @@
 				F0D885DC1E55EC8E0038ED62 /* WheatherService.swift in Sources */,
 				F0D885E41E5730890038ED62 /* WeatherCellAdapter.swift in Sources */,
 				F0D885C91E55E8A30038ED62 /* ViewController.swift in Sources */,
+				D91B91F41E5B0562002EAEBF /* DetailsViewController.swift in Sources */,
 				F0D885C71E55E8A30038ED62 /* AppDelegate.swift in Sources */,
 				F0D885E11E5709710038ED62 /* WeatherCellTableViewCell.swift in Sources */,
 			);

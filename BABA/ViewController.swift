@@ -70,5 +70,16 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let weatherDay = weatherModel?.weatherDays[indexPath.row] else {
+            return
+        }
+        
+        let vc = DetailsViewController()
+        vc.weatherDay = weatherDay
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 

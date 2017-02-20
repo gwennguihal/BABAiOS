@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="BABA" customModuleProvider="target">
+            <connections>
+                <outlet property="bonWeekEndHeightConstraint" destination="y1v-mF-dvz" id="sOo-uE-8R5"/>
+                <outlet property="dateLabel" destination="YIk-rl-vwH" id="MlR-YQ-YRC"/>
+                <outlet property="temperatureLabel" destination="O2F-ga-QeJ" id="Y2U-bn-fzt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bon weekend !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoG-Pa-YoJ">
+                    <rect key="frame" x="76" y="0.0" width="222" height="100"/>
+                    <color key="backgroundColor" red="0.81568627449999997" green="0.83529411760000005" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="y1v-mF-dvz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIk-rl-vwH">
+                    <rect key="frame" x="169" y="110" width="36" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2F-ga-QeJ">
+                    <rect key="frame" x="151" y="141" width="72" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weekend" translatesAutoresizingMaskIntoConstraints="NO" id="QwD-cD-J72">
+                    <rect key="frame" x="102" y="206" width="170" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="QwD-cD-J72" secondAttribute="height" multiplier="46:27" id="iDC-An-iLs"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QwD-cD-J72" firstAttribute="centerX" secondItem="O2F-ga-QeJ" secondAttribute="centerX" id="2wd-fj-PQn"/>
+                <constraint firstItem="NoG-Pa-YoJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="76" id="3hX-qm-9Dg"/>
+                <constraint firstItem="O2F-ga-QeJ" firstAttribute="top" secondItem="YIk-rl-vwH" secondAttribute="bottom" constant="10" id="Jv0-XI-ekg"/>
+                <constraint firstItem="YIk-rl-vwH" firstAttribute="top" secondItem="NoG-Pa-YoJ" secondAttribute="bottom" constant="10" id="XTj-Ng-p7D"/>
+                <constraint firstItem="YIk-rl-vwH" firstAttribute="centerX" secondItem="NoG-Pa-YoJ" secondAttribute="centerX" id="YoX-ob-cLx"/>
+                <constraint firstItem="NoG-Pa-YoJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kPT-z8-Ce4"/>
+                <constraint firstItem="QwD-cD-J72" firstAttribute="top" secondItem="O2F-ga-QeJ" secondAttribute="bottom" constant="50" id="oaT-NU-woH"/>
+                <constraint firstItem="QwD-cD-J72" firstAttribute="height" secondItem="NoG-Pa-YoJ" secondAttribute="height" id="pqS-LT-Sa6"/>
+                <constraint firstItem="NoG-Pa-YoJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uge-d8-KMt"/>
+                <constraint firstItem="O2F-ga-QeJ" firstAttribute="centerX" secondItem="YIk-rl-vwH" secondAttribute="centerX" id="xZo-R7-lhh"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="kPT-z8-Ce4"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Weekend" width="482" height="283"/>
+    </resources>
+</document>
